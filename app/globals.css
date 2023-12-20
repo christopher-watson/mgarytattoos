@@ -62,7 +62,7 @@ main {
    align-items: center;
 }
 
-@media (max-width: 376px) {
+@media (max-width: 600px) {
    .text1-section {
       grid-auto-flow: row;
       grid-template-rows: min-content 1fr;
