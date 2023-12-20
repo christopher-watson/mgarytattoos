@@ -1,3 +1,9 @@
+/**
+ *  **********************
+ *  ******** Blog ********
+ *  **********************
+ */
+
 import { getBlog } from "@/sanity/sanity-utils";
 
 type Props = {

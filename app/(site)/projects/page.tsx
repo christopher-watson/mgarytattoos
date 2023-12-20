@@ -1,3 +1,9 @@
+/**
+ *  **********************
+ *  ****** Projects ******
+ *  **********************
+ */
+
 import { getProjects } from "@/sanity/sanity-utils";
 
 export default async function Projects() {

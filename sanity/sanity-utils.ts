@@ -6,7 +6,8 @@ import { Contact } from "@/types/Contact";
 import { createClient, groq } from "next-sanity";
 
 const clientConfig = {
-   projectId: 'y7b9sqm4',
+   // projectId: 'y7b9sqm4',
+   projectId: 'iu1qj99p',
    dataset: 'production',
    apiVersion: '2023-05-17',
 };
@@ -17,7 +18,14 @@ export async function getLandingPage(): Promise<Landing> {
          _id,
          _createdAt,
          title,
-         content
+         text1Heading,
+         text1,
+         "img1": img1.asset->url,
+         "img1alt": img1.alt,
+         text2Heading,
+         text2,
+         contactHeading,
+         contact
       }`
    )
 };

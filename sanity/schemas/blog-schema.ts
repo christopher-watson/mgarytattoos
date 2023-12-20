@@ -1,6 +1,6 @@
 const blog = {
    name: 'blog',
-   title: 'Blogs Page',
+   title: 'Blogs Collection',
    type: 'document',
    fields: [{
       name: 'name',
@@ -10,7 +10,8 @@ const blog = {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      options: { source: 'name' }
+      options: { source: 'name' },
+      validation: (Rule: any) => Rule.required(),
    }, {
       name: 'image',
       title: 'Image',

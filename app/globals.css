@@ -5,34 +5,71 @@
 /* ------------------------------------------ global */
 :root {
    --text-black: #212427;
+   --brand-red: #de272a;
+   --brand-red-90: #de272a90;
 }
 
 body {
    color: var(--text-black);
-   background: blue;
+   /* background: var(--brand-red-90); */
 }
 
-/* ------------------------------------------ nav */
-.mg-navbar {
+main {
    display: grid;
    grid-template-areas:
-   'home . links';
+      "nav"
+      "children";
+   grid-template-rows: min-content 1fr;
 }
 
-.mg-navbar-home {
-   grid-area: home;
-   display: flex;
-   align-items: center;
-}
-
-.mg-navbar-links {
-   grid-area: links;
-   display: flex;
-   align-items: center;
-   justify-content: space-evenly;
+.navLogo {
+   filter: invert(100%)
 }
 
 /* ------------------------------------------ landing */
 #home-container {
+   display: grid;
    color: var(--text-black);
+   grid-template-rows: repeat(5, max-content);
+   grid-template-areas:
+      "hero"
+      "section1"
+      "wide-image"
+      "section2"
+      "contact";
+}
+
+.home-hero {
+   height: 100vh;
+}
+
+#home-container section {
+   text-align: justify;
+}
+
+.image1-section {
+   min-height: 750px;
+}
+
+.image1-section img {
+   object-fit: cover;
+}
+
+.text1-section {
+   display: grid;
+   grid-auto-flow: column;
+   grid-template-columns: .75fr 1fr;
+   align-items: center;
+}
+
+@media (max-width: 376px) {
+   .text1-section {
+      grid-auto-flow: row;
+      grid-template-rows: min-content 1fr;
+      grid-template-columns: none;
+   }
+
+   .image1-section {
+      min-height: 250px;
+   }
 }
