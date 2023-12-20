@@ -41,7 +41,7 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ['Aftercare', 'Blog', 'Projects', 'Contact'];
+const navItems = ['Aftercare', 'Blogs', 'Projects', 'Contact'];
 
 export default function DrawerAppBar(props: Props) {
    // const { window } = props;
@@ -118,14 +118,18 @@ export default function DrawerAppBar(props: Props) {
                </Typography>
                <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                   {navItems.map((item) => (
-                     <Button key={item} sx={{ color: '#fff', fontWeight: 'bold' }}>
-                        {item}
-                     </Button>
+                     <Link href={`/${item.toLowerCase()}`} key={item}>
+                        <Button sx={{ color: '#fff', fontWeight: 'bold' }}>
+                           {item}
+                        </Button>
+                     </Link>
                   ))}
                </Box>
-               <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-                  <Image className='navLogo' src='/img/mg_logo.png' width={50} height={50} alt='Mike Gary Brand Logo' />
-               </Box>
+               <Link href={'/'}>
+                  <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+                     <Image className='navLogo' src='/img/mg_logo.png' width={50} height={50} alt='Mike Gary Brand Logo' />
+                  </Box>
+               </Link>
             </Toolbar>
          </AppBar>
          <Box component="nav">
