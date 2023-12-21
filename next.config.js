@@ -14,9 +14,6 @@ const nextConfig = {
    experimental: {
       appDir: true,
       // serverComponentsExternalPackages: ["primereact", "primeicons"]
-   },
-   env: {
-      NEXT_PUBLIC_FORM: proccess.env.NEXT_PUBLIC_FORM
    }
 }
 
