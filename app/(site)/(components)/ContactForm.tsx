@@ -10,11 +10,11 @@ interface ContactFormProps {
 
 export default function ContactForm(props: ContactFormProps) {
    const { isLandingPage, placeholderText } = props;
-   const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM!);
+   const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM || '');
 
-   useEffect(() => {
-      console.log(state);
-   }, [state]);
+   // useEffect(() => {
+      // console.log();
+   // }, []);
 
    return (
       <div className='contact-form-container'>
