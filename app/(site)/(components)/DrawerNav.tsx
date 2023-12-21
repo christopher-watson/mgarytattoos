@@ -42,6 +42,7 @@ interface Props {
 
 const drawerWidth = 240;
 const navItems = ['Aftercare', 'Blogs', 'Projects', 'Contact'];
+const drawerItems = ['Home', 'Aftercare', 'Blogs', 'Projects', 'Contact']
 
 export default function DrawerAppBar(props: Props) {
    // const { window } = props;
@@ -60,10 +61,10 @@ export default function DrawerAppBar(props: Props) {
          </Typography>
          <Divider />
          <List>
-            {navItems.map((item) => (
+            {drawerItems.map((item) => (
                <ListItem key={item} disablePadding>
                   <ListItemButton sx={{ textAlign: 'center' }}>
-                     <Link href={`/${item.toLowerCase()}`}>
+                     <Link href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}>
                         <ListItemText primary={item} />
                      </Link>
                   </ListItemButton>

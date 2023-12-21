@@ -7,6 +7,7 @@
 import { getLandingPage } from '@/sanity/sanity-utils';
 import { PortableText } from "@portabletext/react";
 import Image from 'next/image';
+import ContactForm from './(components)/ContactForm';
 
 export default async function Home() {
    const page = await getLandingPage();
@@ -37,11 +38,16 @@ export default async function Home() {
          </section>
 
          {/* contact */}
-         <section className='prose contact-section bg-yellow-200 p-8 sm:px-16 sm:py-20 min-h-fit'>
-            <h1 className='text-center md:text-left'>{page.contactHeading}</h1>
-            <PortableText value={page.contact} />
+         <section className="prose contact-section bg-[url('/img/mg_back_tattoo.jpeg')] bg-center bg-cover  p-8 sm:px-16 sm:py-20 min-h-fit">
+            <div className='contact-blur backdrop-blur-lg py-8'>
+               <h1 className='text-center'>{page.contactHeading}</h1>
+               <PortableText value={page.contact} />
+               <ContactForm
+                  isLandingPage
+                  placeholderText={page.contactPlaceholder}
+               />
+            </div>
          </section>
-
       </div>
    )
 }
