@@ -13,7 +13,7 @@ export default function ContactForm(props: ContactFormProps) {
    const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM || '');
 
    // useEffect(() => {
-      // console.log();
+   // console.log();
    // }, []);
 
    return (
@@ -39,8 +39,7 @@ export default function ContactForm(props: ContactFormProps) {
                         Submit
                      </Button>
                   )}
-
-                  <ValidationError errors={state.errors} />
+                  <ValidationError className='contact-form-error' errors={state.errors} />
                </form>
             </div>
          ) : (
@@ -52,15 +51,15 @@ export default function ContactForm(props: ContactFormProps) {
                   <textarea id="message" name="message" />
                   <ValidationError prefix="Message" field="message" errors={state.errors} />
                   {state.succeeded ? (
-                     <button type="button" disabled>
+                     <Button variant="contained" className="mt-8 bg-black" type="submit" disabled>
                         Message Sent! ✅
-                     </button>
+                     </Button>
                   ) : (
-                     <button type="submit" disabled={state.submitting}>
+                     <Button variant="contained" className="mt-8 bg-black" type="submit" disabled={state.submitting}>
                         Submit
-                     </button>
+                     </Button>
                   )}
-                  <ValidationError errors={state.errors} />
+                  <ValidationError className='contact-form-error' errors={state.errors} />
                </form>
             </div>
          )}
