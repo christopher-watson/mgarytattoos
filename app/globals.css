@@ -111,7 +111,7 @@ main {
    min-width: 500px;
 }
 
-.landing-page-contact-form div {
+contact-form-error {
    text-align: center;
    margin-top: 8px;
 }
@@ -119,6 +119,7 @@ main {
 .landing-page-contact-form button {
    color: var(--brand-white);
    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+   margin: 2rem 0;
 }
 
 .landing-page-contact-form button:hover {
