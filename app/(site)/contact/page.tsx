@@ -6,6 +6,7 @@
 
 import { getContactPage } from '@/sanity/sanity-utils'; 
 import { PortableText } from "@portabletext/react";
+import ContactForm from '../(components)/ContactForm';
 import Image from 'next/image';
 
 export default async function Contact() {
@@ -15,6 +16,7 @@ export default async function Contact() {
       <div>
          <h1>{page.title}</h1>
          <PortableText value={page.content} />
+         <ContactForm />
       </div>
    )
 }

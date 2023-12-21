@@ -52,6 +52,11 @@ const landing = {
          type: 'array',
          of: [{ type: "block" }]
       },
+      {
+         name: 'contactPlaceholder',
+         title: 'Contact Placeholder Text',
+         type: 'string'
+      }
    ]
 }
 

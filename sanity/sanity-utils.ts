@@ -25,6 +25,7 @@ export async function getLandingPage(): Promise<Landing> {
          text2Heading,
          text2,
          contactHeading,
+         contactPlaceholder,
          contact
       }`
    )
