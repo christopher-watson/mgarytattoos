@@ -9,11 +9,25 @@ const contact = {
          type: 'string'
       },
       {
-         name: 'content',
-         title: 'Content',
-         type: 'array',
-         of: [{ type: "block" }]
-      }
+         name: 'email',
+         title: 'Email',
+         type: 'string'
+      },
+      {
+         name: 'phone',
+         title: 'Phone',
+         type: 'string'
+      },
+      {
+         name: 'address',
+         title: 'Address',
+         type: 'string'
+      },
+      {
+         name: 'link',
+         title: 'Instagram Link',
+         type: 'url'
+      },
    ]
 }
 

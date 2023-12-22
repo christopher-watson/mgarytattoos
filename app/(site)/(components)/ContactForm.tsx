@@ -45,17 +45,21 @@ export default function ContactForm(props: ContactFormProps) {
          ) : (
             <div className="contact-page-contact-form">
                <form onSubmit={handleSubmit}>
-                  <label htmlFor="email">Email Address</label>
-                  <input id="email" type="email" name="email" />
+                  <label htmlFor="name">Full Name <span className='required-label text-xs'>(required)</span></label>
+                  <input className='rounded-md' id="name" type="text" name="name" />
+                  <ValidationError prefix="Name" field="name" errors={state.errors} />
+                  <label htmlFor="email">Email Address <span className='required-label text-xs'>(required)</span></label>
+                  <input className='rounded-md' id="email" type="email" name="email" autoComplete="off" />
                   <ValidationError prefix="Email" field="email" errors={state.errors} />
-                  <textarea id="message" name="message" />
+                  <label htmlFor="message">Message <span className='required-label text-xs'>(required)</span></label>
+                  <textarea className='rounded-md placeholder:text-xs' id="message" name="message" placeholder={placeholderText} />
                   <ValidationError prefix="Message" field="message" errors={state.errors} />
                   {state.succeeded ? (
-                     <Button variant="contained" className="mt-8 bg-black" type="submit" disabled>
+                     <Button variant="contained" className="mt-8" type="submit" disabled>
                         Message Sent! ✅
                      </Button>
                   ) : (
-                     <Button variant="contained" className="mt-8 bg-black" type="submit" disabled={state.submitting}>
+                     <Button variant="contained" className="mt-8" type="submit" disabled={state.submitting}>
                         Submit
                      </Button>
                   )}

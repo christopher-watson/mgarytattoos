@@ -48,7 +48,10 @@ export async function getContactPage(): Promise<Contact> {
          _id,
          _createdAt,
          title,
-         content
+         email,
+         phone,
+         address,
+         link
       }`
    )
 };
