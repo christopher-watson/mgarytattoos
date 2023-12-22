@@ -5,14 +5,15 @@
 /* ------------------------------------------ global */
 :root {
    --text-black: #212427;
+   --bg-black: #060404;
    --brand-red: #de272a;
    --brand-red-90: #de272a90;
    --brand-white: #ebe8f0;
 }
 
 body {
-   color: var(--text-black);
-   /* background: var(--brand-red-90); */
+   color: var(--brand-white);
+   background: var(--bg-black);
 }
 
 main {
@@ -33,11 +34,11 @@ main {
    color: var(--text-black);
    grid-template-rows: repeat(5, max-content);
    grid-template-areas:
-   "hero"
-   "section1"
-   "wide-image"
-   "section2"
-   "contact";
+      "hero"
+      "section1"
+      "wide-image"
+      "section2"
+      "contact";
 }
 
 .home-hero {
@@ -46,6 +47,11 @@ main {
 
 #home-container section {
    text-align: justify;
+   color: var(--brand-white);
+}
+
+#home-container h1 {
+   color: var(--brand-white);
 }
 
 .image1-section {
@@ -64,7 +70,7 @@ main {
 }
 
 .contact-section {
-   color: var(--brand-white); 
+   color: var(--brand-white);
 }
 
 .contact-section h1 {
@@ -78,7 +84,7 @@ main {
       grid-template-rows: min-content 1fr;
       grid-template-columns: none;
    }
-   
+
    .image1-section {
       min-height: 400px;
    }
@@ -87,25 +93,25 @@ main {
 
 /* ------------------------------------------ ContactForm */
 .landing-page-contact-form input,
-.landing-page-contact-form textarea {
+.landing-page-contact-form textarea,
+.contact-page-contact-form input,
+.contact-page-contact-form textarea {
    color: var(--text-black);
 }
 
-.landing-page-contact-form textarea {
+.landing-page-contact-form textarea,
+.contact-page-contact-form textarea {
    resize: none;
 }
 
-/* .landing-page-contact-form label,
-.contact-section p {
-   background: #ebe8f050; 
-} */
-
-.landing-page-contact-form {
+.landing-page-contact-form,
+.contact-page-contact-form {
    display: flex;
    justify-content: center;
 }
 
-.landing-page-contact-form form {
+.landing-page-contact-form form,
+.contact-page-contact-form form {
    display: flex;
    flex-direction: column;
    min-width: 500px;
@@ -116,20 +122,96 @@ contact-form-error {
    margin-top: 8px;
 }
 
-.landing-page-contact-form button {
+.landing-page-contact-form button,
+.contact-page-contact-form button {
    color: var(--brand-white);
-   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
    margin: 2rem 0;
+}
+
+.landing-page-contact-form button {
+   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .landing-page-contact-form button:hover {
    background-color: var(--text-black);
 }
 
+.contact-page-contact-form button {
+   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+   background-color: var(--brand-red);
+}
+
+.contact-page-contact-form button:hover {
+   background-color: var(--brand-red-90);
+}
+
+.contact-page-contact-form button:disabled {
+   background-color: var(--brand-red-90);
+}
+
 @media (max-width: 600px) {
-   .landing-page-contact-form form {
+   .landing-page-contact-form form,
+   .contact-page-contact-form form {
       display: flex;
       flex-direction: column;
       min-width: initial;
    }
+}
+
+/* ------------------------------------------ contact */
+.contact-container {
+   display: grid;
+   grid-template-areas:
+      "content contact-form";
+   grid-template-columns: 1fr 1fr;
+   margin: 0 auto;
+   margin-top: 200px;
+   gap: 50px;
+}
+
+.contact-page-form-div,
+.contact-page-content-div {
+   display: flex;
+   padding: 0 20px;
+   color: var(--brand-white);
+}
+
+.contact-page-form-div {
+   grid-area: contact-form;
+   align-items: center;
+}
+
+.contact-page-content-div {
+   grid-area: content;
+   flex-direction: column;
+}
+
+.contact-page-content-div h1,
+.contact-page-content-div a {
+   color: var(--brand-white);
+}
+
+.contact-page-content-div a {
+   margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+   .contact-container {
+      grid-template-areas:
+         "content"
+         "contact-form";
+      grid-template-columns: 1fr;
+   }
+
+   .contact-page-form-div {
+      grid-area: contact-form;
+      align-items: center;
+   }
+
+   .contact-page-content-div {
+      grid-area: content;
+      flex-direction: column;
+      text-align: center;
+   }
+
 }

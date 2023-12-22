@@ -12,7 +12,7 @@ import ContactForm from './(components)/ContactForm';
 export default async function Home() {
    const page = await getLandingPage();
    return (
-      <div id='home-container' className='bg-green-200'>
+      <div id='home-container'>
          {/* hero */}
          <div className="home-hero bg-[url('/img/mg_background.png')] bg-center bg-cover"></div>
 
@@ -32,7 +32,7 @@ export default async function Home() {
          </section>
 
          {/* section 2 */}
-         <section className='prose text2-section bg-orange-200 p-8 sm:px-16 sm:py-20 min-h-fit'>
+         <section className='prose text2-section p-8 sm:px-16 sm:py-20 min-h-fit'>
             <h1 className='text-center md:text-left'>{page.text2Heading}</h1>
             <PortableText value={page.text2} />
          </section>

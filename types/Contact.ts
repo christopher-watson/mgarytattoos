@@ -4,5 +4,8 @@ export type Contact = {
    _id: string;
    _createdAt: Date;
    title: string;
-   content: PortableTextBlock[];
+   email: string;
+   phone: string;
+   address: string;
+   link: URL;
 };
