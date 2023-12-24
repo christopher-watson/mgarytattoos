@@ -1,6 +1,6 @@
-const aftercare = {
-   name: 'aftercare',
-   title: 'Aftercare Page',
+const about = {
+   name: 'about',
+   title: 'About Page',
    type: 'document',
    fields: [
       {
@@ -9,7 +9,7 @@ const aftercare = {
          type: 'string'
       },
       {
-         name: 'aftercareImg1',
+         name: 'aboutImg1',
          title: 'Image',
          type: 'image',
          options: { hotspot: true },
@@ -30,7 +30,18 @@ const aftercare = {
          type: 'array',
          of: [{ type: "block" }]
       },
+      // {
+      //    name: 'aboutImg2',
+      //    title: 'Image 2',
+      //    type: 'image',
+      //    options: { hotspot: true },
+      //    fields: [{
+      //       name: 'alt',
+      //       title: 'Alt',
+      //       type: 'string'
+      //    }]
+      // },
    ]
 }
 
-export default aftercare;
+export default about;

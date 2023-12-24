@@ -12,5 +12,6 @@ export type Landing = {
    text2: PortableTextBlock[];
    contactHeading: string;
    contactPlaceholder: string;
+   contactPlaceholder2: string;
    contact: PortableTextBlock[];
 };

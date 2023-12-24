@@ -54,7 +54,12 @@ const landing = {
       },
       {
          name: 'contactPlaceholder',
-         title: 'Contact Placeholder Text',
+         title: 'Tattoo Idea Text',
+         type: 'string'
+      },
+      {
+         name: 'contactPlaceholder2',
+         title: 'Tattoo Location Text',
          type: 'string'
       }
    ]

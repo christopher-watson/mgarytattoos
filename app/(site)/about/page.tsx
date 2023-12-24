@@ -1,45 +1,44 @@
 /**
  *  **********************
- *  ****** Aftercare *****
+ *  ****** About *****
  *  **********************
  */
 
-import { getAftercarePage } from "@/sanity/sanity-utils";
+import { getAboutPage } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from 'next/image';
 
-export default async function Aftercare() {
-   const page = await getAftercarePage();
-
+export default async function About() {
+   const page = await getAboutPage();
    return (
-      <div id='aftercare-container'>
+      <div id='about-container'>
          {/* heading */}
-         <section className="prose aftercare-heading p-8 sm:px-16 sm:py-20'">
+         <section className="prose about-heading p-8 sm:px-16 sm:py-20'">
             <h1>{page.title}</h1>
          </section>
 
          {/* fullscreen image*/}
-         <section className='aftercareImage1-section relative'>
+         <section className='aboutImage1-section relative'>
             <Image
                fill
-               src={page.aftercareImg1}
-               alt={page.aftercareImg1Alt}
+               src={page.aboutImg1}
+               alt={page.aboutImg1Alt}
             />
          </section>
 
-         <div className="under-aftercare-image">
+         <div className="under-about-image">
             {/* subtitle */}
-            <section className="prose aftercare-subtitle">
+            <section className="prose about-subtitle">
                <h2>{page.subtitle}</h2>
             </section>
 
             {/* content area */}
-            <section className="aftercare-content">
+            <section className="about-content">
                <PortableText value={page.content} />
             </section>
-
+            
             {/* logo */}
-            <section className="aftercare-logo">
+            <section className="about-logo">
                <Image className='navLogo' src='/img/mg_logo_lg.png' width={200} height={200} alt='Mike Gary Brand Logo' />
             </section>
          </div>

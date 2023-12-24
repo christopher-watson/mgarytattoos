@@ -44,7 +44,8 @@ export default async function Home() {
                <PortableText value={page.contact} />
                <ContactForm
                   isLandingPage
-                  placeholderText={page.contactPlaceholder}
+                  placeholderText1={page.contactPlaceholder}
+                  placeholderText2={page.contactPlaceholder2}
                />
             </div>
          </section>

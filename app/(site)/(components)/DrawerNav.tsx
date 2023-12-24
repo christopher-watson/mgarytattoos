@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
@@ -12,8 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-// import CssBaseline from '@mui/material/CssBaseline';
+// import Tooltip from '@mui/material/Tooltip';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -32,25 +31,23 @@ export const metadata = {
    description: 'Michael Gary Tattoos',
 }
 
-interface Props {
-   /**
-    * Injected by the documentation to work in an iframe.
-    * You won't need it on your project.
-    */
-   // window?: () => Window;
-}
-
 const drawerWidth = 240;
-const navItems = ['Aftercare', 'Blogs', 'Projects', 'Contact'];
-const drawerItems = ['Home', 'Aftercare', 'Blogs', 'Projects', 'Contact']
+const navItems = ['About', 'Aftercare', 'Blogs', 'Contact', 'Projects' ];
+const drawerItems = ['Home', 'About', 'Aftercare', 'Blogs', 'Contact', 'Projects' ]
 
-export default function DrawerAppBar(props: Props) {
-   // const { window } = props;
+export default function DrawerAppBar() {
    const [mobileOpen, setMobileOpen] = React.useState(false);
 
    const handleDrawerToggle = () => {
       setMobileOpen((prevState) => !prevState);
    };
+
+   // useEffect(() => {
+   //    const currentPage = window.location.pathname.toString().split('/')[1];
+   //    if (currentPage === 'aftercare') {
+   //       console.log('AFTERCARE PAGE');
+   //    }
+   // }, []);
 
    const drawer = (
       <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -119,8 +116,8 @@ export default function DrawerAppBar(props: Props) {
                </Typography>
                <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                   {navItems.map((item) => (
-                     <Link href={`/${item.toLowerCase()}`} key={item}>
-                        <Button sx={{ color: '#fff', fontWeight: 'bold' }}>
+                     <Link href={`/${item.toLowerCase()}`} key={item} className='mg-nav-item'>
+                        <Button sx={{ fontWeight: 'bold' }}>
                            {item}
                         </Button>
                      </Link>
