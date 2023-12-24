@@ -1,6 +1,7 @@
 import { Project } from "@/types/Project";
 import { Blog } from "@/types/Blog";
 import { Landing } from "@/types/Landing";
+import { About } from "@/types/About";
 import { Aftercare } from "@/types/Aftercare";
 import { Contact } from "@/types/Contact";
 import { createClient, groq } from "next-sanity";
@@ -26,7 +27,22 @@ export async function getLandingPage(): Promise<Landing> {
          text2,
          contactHeading,
          contactPlaceholder,
+         contactPlaceholder2,
          contact
+      }`
+   )
+};
+
+export async function getAboutPage(): Promise<About> {
+   return createClient(clientConfig).fetch(
+      groq`*[_type=="about"][0]{
+         _id,
+         _createdAt,
+         title,
+         "aboutImg1": aboutImg1.asset->url,
+         "aboutImg1Alt": aboutImg1.alt,
+         content,
+         subtitle,
       }`
    )
 };
@@ -37,6 +53,9 @@ export async function getAftercarePage(): Promise<Aftercare> {
          _id,
          _createdAt,
          title,
+         "aftercareImg1": aftercareImg1.asset->url,
+         "aftercareImg1Alt": aftercareImg1.alt,
+         subtitle,
          content
       }`
    )
@@ -51,7 +70,9 @@ export async function getContactPage(): Promise<Contact> {
          email,
          phone,
          address,
-         link
+         link,
+         contactPlaceholder,
+         contactPlaceholder2
       }`
    )
 };

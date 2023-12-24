@@ -1,9 +1,10 @@
-import landing from './landing-schema';
+import about from './about-schema';
 import aftercare from './aftercare-schema';
-import project from './project-schema';
-import contact from './contact-schema';
 import blog from './blog-schema';
+import contact from './contact-schema';
+import landing from './landing-schema';
+import project from './project-schema';
 
-const schemas = [landing, aftercare, contact, project, blog];
+const schemas = [about, aftercare, blog, contact, landing, project];
 
 export default schemas;

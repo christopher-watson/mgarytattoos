@@ -5,7 +5,8 @@
 /* ------------------------------------------ global */
 :root {
    --text-black: #212427;
-   --bg-black: #060404;
+   /* --bg-black: #060404; */
+   --bg-black: #000;
    --brand-red: #de272a;
    --brand-red-90: #de272a90;
    --brand-white: #ebe8f0;
@@ -14,6 +15,13 @@
 body {
    color: var(--brand-white);
    background: var(--bg-black);
+   margin-top: 96px;
+}
+
+@media (max-width: 600px) {
+   body {
+      margin-top: 56px;
+   }
 }
 
 main {
@@ -28,6 +36,21 @@ main {
    filter: invert(100%)
 }
 
+.prose .prose h1, .prose h2, .prose p {
+   color: var(--brand-white);
+}
+
+/* ------------------------------------------ navbar */
+
+.mg-nav-item button {
+   color: var(--brand-white);
+}
+
+.mg-nav-item button:hover {
+   background-color: var(--brand-white);
+   color: var(--text-black);
+}
+
 /* ------------------------------------------ landing */
 #home-container {
    display: grid;
@@ -39,6 +62,7 @@ main {
       "wide-image"
       "section2"
       "contact";
+      margin-top: -96px;
 }
 
 .home-hero {
@@ -47,7 +71,6 @@ main {
 
 #home-container section {
    text-align: justify;
-   color: var(--brand-white);
 }
 
 #home-container h1 {
@@ -73,12 +96,15 @@ main {
    color: var(--brand-white);
 }
 
-.contact-section h1 {
-   color: var(--brand-white);
+.contact-blur {
+   padding: 20px;
 }
 
-
 @media (max-width: 600px) {
+   #home-container {
+      margin-top: 0;
+   }
+
    .text1-section {
       grid-auto-flow: row;
       grid-template-rows: min-content 1fr;
@@ -124,7 +150,6 @@ contact-form-error {
 
 .landing-page-contact-form button,
 .contact-page-contact-form button {
-   color: var(--brand-white);
    margin: 2rem 0;
 }
 
@@ -165,7 +190,7 @@ contact-form-error {
       "content contact-form";
    grid-template-columns: 1fr 1fr;
    margin: 0 auto;
-   margin-top: 200px;
+   margin-top: 100px;
    gap: 50px;
 }
 
@@ -214,4 +239,76 @@ contact-form-error {
       text-align: center;
    }
 
+}
+
+/* ------------------------------------------ about */
+.about-heading h1 {
+   color: var(--brand-white);
+   text-align: center;
+   margin: 24px 0;
+}
+
+.aboutImage1-section {
+   min-height: 750px;
+}
+
+.aboutImage1-section img {
+   object-fit: cover;
+}
+
+.under-about-image {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 40px;
+}
+
+.about-subtitle {
+   margin: 24px 0;
+}
+
+.about-logo {
+   margin: 24px 0;
+}
+
+.about-content {
+   margin: 24px 0;
+   text-align: center;
+}
+
+/* ------------------------------------------ aftercare */
+.aftercare-heading h1 {
+   color: var(--brand-white);
+   text-align: center;
+   margin: 24px 0;
+}
+
+.aftercareImage1-section {
+   min-height: 750px;
+}
+
+.aftercareImage1-section img {
+   object-fit: cover;
+}
+
+.under-aftercare-image {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 40px;
+}
+
+.aftercare-subtitle {
+   margin: 24px 0;
+}
+
+.aftercare-logo {
+   margin: 24px 0;
+}
+
+.aftercare-content {
+   margin: 24px 0;
+   text-align: center;
 }

@@ -21,12 +21,15 @@ export default async function Contact() {
             <div>{page.email}</div>
             <div>{page.phone}</div>
             <div>{page.address}</div>
-            <Link href={page.link}>
-               <LinkIcon />
+            <Link href={page.link} rel="noopener noreferrer" target="_blank">
+               Instagram <LinkIcon />
             </Link>
          </div>
          <div className="prose contact-page-form-div">
-            <ContactForm />
+            <ContactForm
+               // placeholderText1={page.contactPlaceholder}
+               // placeholderText2={page.contactPlaceholder2}
+            />
          </div>
       </div>
    )
