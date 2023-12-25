@@ -1,4 +1,3 @@
-// "use client"
 /**
  *  **********************
  *  ****** Contact *******
@@ -13,7 +12,7 @@ import Image from 'next/image';
 
 export default async function Contact() {
    const page = await getContactPage();
-   // console.log('contact', page);
+
    return (
       <div className='contact-container'>
          <div className='prose contact-page-content-div'>

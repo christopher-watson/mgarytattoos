@@ -39,8 +39,8 @@ export default async function Aftercare() {
             </section>
 
             {/* logo */}
-            <section className="aftercare-logo">
-               <Image className='navLogo' src='/img/mg_logo_lg.png' width={200} height={200} alt='Mike Gary Brand Logo' />
+            <section className="brand-logo">
+               <Image className='brand-logo-img' src='/img/mg_logo_lg.png' width={150} height={200} alt='Mike Gary Brand Logo' />
             </section>
          </div>
       </div>

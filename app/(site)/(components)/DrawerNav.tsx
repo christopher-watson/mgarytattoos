@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+"use client"
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
@@ -26,28 +27,21 @@ import '../../globals.css'
  *  */
 
 
-export const metadata = {
-   title: 'Michael Gary Tattoos',
-   description: 'Michael Gary Tattoos',
-}
+// export const metadata = {
+//    title: 'Michael Gary Tattoos',
+//    description: 'Michael Gary Tattoos',
+// }
 
 const drawerWidth = 240;
-const navItems = ['About', 'Aftercare', 'Blogs', 'Contact', 'Projects' ];
-const drawerItems = ['Home', 'About', 'Aftercare', 'Blogs', 'Contact', 'Projects' ]
+const navItems = ['About', 'Aftercare', 'Blogs', 'Contact', 'Projects'];
+const drawerItems = ['Home', 'About', 'Aftercare', 'Blogs', 'Contact', 'Projects']
 
 export default function DrawerAppBar() {
-   const [mobileOpen, setMobileOpen] = React.useState(false);
+   const [mobileOpen, setMobileOpen] = useState(false);
 
    const handleDrawerToggle = () => {
       setMobileOpen((prevState) => !prevState);
    };
-
-   // useEffect(() => {
-   //    const currentPage = window.location.pathname.toString().split('/')[1];
-   //    if (currentPage === 'aftercare') {
-   //       console.log('AFTERCARE PAGE');
-   //    }
-   // }, []);
 
    const drawer = (
       <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
