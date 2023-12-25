@@ -13,10 +13,6 @@ export default function ContactForm(props: ContactFormProps) {
    const { isLandingPage, placeholderText1, placeholderText2 } = props;
    const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM || '');
 
-   // useEffect(() => {
-   // console.log();
-   // }, []);
-
    return (
       <div className='contact-form-container'>
          {isLandingPage ? (

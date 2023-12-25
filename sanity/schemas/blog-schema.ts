@@ -3,14 +3,14 @@ const blog = {
    title: 'Blogs Collection',
    type: 'document',
    fields: [{
-      name: 'name',
-      title: 'Name',
+      name: 'title',
+      title: 'Title',
       type: 'string'
    }, {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      options: { source: 'name' },
+      options: { source: 'title' },
       validation: (Rule: any) => Rule.required(),
    }, {
       name: 'image',
@@ -27,7 +27,22 @@ const blog = {
       title: 'Content',
       type: 'array',
       of: [{ type: 'block' }]
-   }]
+   },
+   {
+      name: 'publishedAt',
+      title: 'Published at',
+      type: 'datetime',
+   },
+   ],
+   orderings: [
+      {
+         title: 'Publish Date',
+         name: 'publishDateAsc',
+         by: [
+            { field: 'publishedAt', direction: 'asc' }
+         ]
+      },
+   ],
 };
 
 export default blog;

@@ -36,8 +36,14 @@ main {
    filter: invert(100%)
 }
 
-.prose .prose h1, .prose h2, .prose p {
+.prose .prose h1,
+.prose h2,
+.prose p {
    color: var(--brand-white);
+}
+
+.brand-logo {
+   margin: 24px 0;
 }
 
 /* ------------------------------------------ navbar */
@@ -62,7 +68,7 @@ main {
       "wide-image"
       "section2"
       "contact";
-      margin-top: -96px;
+   margin-top: -96px;
 }
 
 .home-hero {
@@ -175,6 +181,7 @@ contact-form-error {
 }
 
 @media (max-width: 600px) {
+
    .landing-page-contact-form form,
    .contact-page-contact-form form {
       display: flex;
@@ -266,10 +273,8 @@ contact-form-error {
 
 .about-subtitle {
    margin: 24px 0;
-}
-
-.about-logo {
-   margin: 24px 0;
+   text-decoration: underline;
+   text-decoration-color: var(--brand-red);
 }
 
 .about-content {
@@ -302,13 +307,93 @@ contact-form-error {
 
 .aftercare-subtitle {
    margin: 24px 0;
-}
-
-.aftercare-logo {
-   margin: 24px 0;
+   text-decoration: underline;
+   text-decoration-color: var(--brand-red);
 }
 
 .aftercare-content {
    margin: 24px 0;
    text-align: center;
+}
+
+/* ------------------------------------------ aftercare */
+.not-found-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: calc(100vh - 96px);
+}
+
+.not-found-container h1,
+.not-found-container a {
+   color: var(--brand-white);
+}
+
+/* ------------------------------------------ blogs */
+.blogs-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.blogs-header {
+   color: var(--brand-white);
+   margin: 24px 0;
+}
+
+.blogs-container .prose h2 {
+   color: var(--text-black);
+}
+
+.blog {
+   margin: 24px 0 36px 0;
+}
+
+.blog-card a img {
+   height: 200px;
+}
+
+/* ------------------------------------------ [blog] */
+.blog-container {
+   display: flex;
+   padding: 24px;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   gap: 16px;
+   max-width: 1200px;
+}
+
+.blog-container .prose,
+.blog-container a {
+   color: var(--brand-white);
+}
+
+.blog-image-div {
+   display: flex;
+   width: 100%;
+   justify-content: center;
+   background-color: var(--text-black);
+}
+
+.blog-center-div {
+   display: flex;
+   gap: 24px;
+}
+
+.blog-url a {
+   text-decoration: none;
+}
+
+.blog-title h2 {
+   text-decoration: underline;
+   text-decoration-color: var(--brand-red);
+}
+
+@media (max-width: 600px) {
+   .blog-center-div {
+      flex-direction: column;
+      gap: 8px;
+   }
 }
