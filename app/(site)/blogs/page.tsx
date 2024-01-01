@@ -15,8 +15,8 @@ export default async function Blogs() {
    const blogs = await getBlogs();
    return (
       <div className="blogs-container">
-         <div className="prose">
-            <h1 className="blogs-header">Blogs</h1>
+         <div className="prose blogs-heading p-8 sm:px-16 sm:py-20">
+            <h1>Blogs</h1>
          </div>
          <div className="all-blogs-div">
             {blogs.map((blog, index) => (

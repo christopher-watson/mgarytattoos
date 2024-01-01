@@ -256,7 +256,7 @@ contact-form-error {
 }
 
 .aboutImage1-section {
-   min-height: 750px;
+   min-height: 450px;
 }
 
 .aboutImage1-section img {
@@ -282,6 +282,12 @@ contact-form-error {
    text-align: center;
 }
 
+@media (max-width: 600px) {
+   .aboutImage1-section {
+      min-height: 250px;
+   }
+}
+
 /* ------------------------------------------ aftercare */
 .aftercare-heading h1 {
    color: var(--brand-white);
@@ -290,7 +296,7 @@ contact-form-error {
 }
 
 .aftercareImage1-section {
-   min-height: 750px;
+   min-height: 450px;
 }
 
 .aftercareImage1-section img {
@@ -316,6 +322,12 @@ contact-form-error {
    text-align: center;
 }
 
+@media (max-width: 600px) {
+   .aftercareImage1-section {
+      min-height: 250px;
+   }
+}
+
 /* ------------------------------------------ aftercare */
 .not-found-container {
    display: flex;
@@ -337,8 +349,9 @@ contact-form-error {
    align-items: center;
 }
 
-.blogs-header {
+.blogs-heading h1 {
    color: var(--brand-white);
+   margin: 24px 0;
    margin: 24px 0;
 }
 
@@ -347,7 +360,7 @@ contact-form-error {
 }
 
 .blog {
-   margin: 24px 0 36px 0;
+   margin-bottom: 36px;
 }
 
 .blog-card a img {
@@ -396,4 +409,56 @@ contact-form-error {
       flex-direction: column;
       gap: 8px;
    }
+}
+
+/* ------------------------------------------ Masonry Grid */
+#masonry-map-container {
+   display: flex;
+   justify-content: center;
+}
+
+.masonry-map-div {
+   display: flex;
+   justify-content: center;
+   max-width: 1800px;
+   margin-bottom: 60px;
+}
+
+
+/* ------------------------------------------ Projects */
+#projects-container {
+   padding: 0 20px;
+}
+
+.projects-heading h1 {
+   color: var(--brand-white);
+   text-align: center;
+   margin: 24px 0;
+}
+
+.blog-title h2 {
+   text-decoration: underline;
+   text-decoration-color: var(--brand-red);
+}
+
+/* ------------------------------------------ [project] */
+#project-container {
+   padding: 0 20px;
+}
+
+.project-heading h1 {
+   color: var(--brand-white);
+   text-align: center;
+   margin: 24px 0;
+}
+
+#project-container .brand-logo {
+   display: flex;
+   justify-content: center;
+}
+
+.project-image {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 48px;
 }

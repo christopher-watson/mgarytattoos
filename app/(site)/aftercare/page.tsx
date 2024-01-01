@@ -14,7 +14,7 @@ export default async function Aftercare() {
    return (
       <div id='aftercare-container'>
          {/* heading */}
-         <section className="prose aftercare-heading p-8 sm:px-16 sm:py-20'">
+         <section className="prose aftercare-heading p-8 sm:px-16 sm:py-20">
             <h1>{page.title}</h1>
          </section>
 
