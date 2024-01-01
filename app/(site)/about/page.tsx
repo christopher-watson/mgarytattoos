@@ -13,7 +13,7 @@ export default async function About() {
    return (
       <div id='about-container'>
          {/* heading */}
-         <section className="prose about-heading p-8 sm:px-16 sm:py-20'">
+         <section className="prose about-heading p-8 sm:px-16 sm:py-20">
             <h1>{page.title}</h1>
          </section>
 

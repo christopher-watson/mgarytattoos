@@ -98,6 +98,7 @@ export async function getProject(slug: string): Promise<Project> {
          name,
          "slug": slug.current,
          "image": image.asset->url,
+         "imageAlt": image.alt,
          content
       }`,
       { slug }

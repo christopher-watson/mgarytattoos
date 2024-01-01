@@ -22,12 +22,22 @@ const project = {
          title: 'Alt',
          type: 'string'
       }]
-   }, {
-      name: 'content',
-      title: 'Content',
-      type: 'array',
-      of: [{ type: 'block' }]
-   }]
+   },
+   {
+      name: 'publishedAt',
+      title: 'Published at',
+      type: 'datetime',
+   },
+   ],
+   orderings: [
+      {
+         title: 'Publish Date',
+         name: 'publishDateAsc',
+         by: [
+            { field: 'publishedAt', direction: 'asc' }
+         ]
+      },
+   ],
 };
 
 export default project;
