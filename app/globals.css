@@ -32,10 +32,6 @@ main {
    grid-template-rows: min-content 1fr;
 }
 
-.navLogo {
-   filter: invert(100%)
-}
-
 .prose .prose h1,
 .prose h2,
 .prose p {
@@ -104,6 +100,7 @@ main {
 
 .contact-blur {
    padding: 20px;
+   text-align: center;
 }
 
 @media (max-width: 600px) {
