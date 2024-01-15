@@ -104,7 +104,7 @@ export default function DrawerAppBar() {
                         columnGap: '10px', width: 'max-content',
                         color: '#fff',
                      }}>
-                        <Image className='navLogo' src='/img/mg_logo.png' width={50} height={50} alt='Mike Gary Brand Logo' /> <div>Mike Gary Tattoos</div>
+                        <Image className='navLogo' src='/img/mg_logo_lg.png' width={50} height={50} alt='Mike Gary Brand Logo' /> <div>Mike Gary Tattoos</div>
                      </Box>
                   </Link>
                </Typography>
@@ -119,7 +119,7 @@ export default function DrawerAppBar() {
                </Box>
                <Link href={'/'}>
                   <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-                     <Image className='navLogo' src='/img/mg_logo.png' width={50} height={50} alt='Mike Gary Brand Logo' />
+                     <Image className='navLogo' src='/img/mg_logo_lg.png' width={50} height={50} alt='Mike Gary Brand Logo' />
                   </Box>
                </Link>
             </Toolbar>
