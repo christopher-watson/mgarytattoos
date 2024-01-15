@@ -1,5 +1,4 @@
 "use client"
-import { useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import Button from '@mui/material/Button';
 
@@ -36,15 +35,17 @@ export default function ContactForm(props: ContactFormProps) {
                   <label htmlFor="location">Tattoo location <span className='required-label text-xs'>(required)</span></label>
                   <textarea className='rounded-md placeholder:text-xs' id="location" name="message" autoComplete="off" placeholder={placeholderText2} />
                   <ValidationError prefix="location" field="location" errors={state.errors} />
-                  {state.succeeded ? (
-                     <Button variant="contained" className="mt-8 bg-black" type="submit" disabled>
-                        Message Sent! ✅
-                     </Button>
-                  ) : (
-                     <Button variant="contained" className="mt-8 bg-black" type="submit" disabled={state.submitting}>
-                        Submit
-                     </Button>
-                  )}
+                  <>
+                     {state.succeeded ? (
+                        <Button variant="contained" className="mt-8 bg-black" type="submit" disabled>
+                           Message Sent! ✅
+                        </Button>
+                     ) : (
+                        <Button variant="contained" className="mt-8 bg-black" type="submit" disabled={state.submitting}>
+                           Submit
+                        </Button>
+                     )}
+                  </>
                   <ValidationError className='contact-form-error' errors={state.errors} />
                </form>
             </div>
