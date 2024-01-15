@@ -3,7 +3,8 @@ import '../globals.css'
 
 export const metadata = {
    title: 'Michael Gary Tattoos',
-   description: 'Michael Gary Tattoos',
+   name: 'Michael Gary Tattoos',
+   description: 'Michael Gary Tattoos. A Portfolio, Blog, and Contact Information',
 }
 
 export default function RootLayout({
