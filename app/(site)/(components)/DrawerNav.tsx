@@ -47,7 +47,7 @@ export default function DrawerAppBar() {
       <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
          <Typography variant="h6" sx={{ my: 2 }}>
             <Link href='/'>
-               Mike Gary Tattoos
+               Michael Gary Tattoos
             </Link>
          </Typography>
          <Divider />
@@ -104,7 +104,7 @@ export default function DrawerAppBar() {
                         columnGap: '10px', width: 'max-content',
                         color: '#fff',
                      }}>
-                        <Image className='navLogo' src='/img/mg_logo_lg.png' width={50} height={50} alt='Mike Gary Brand Logo' /> <div>Mike Gary Tattoos</div>
+                        <Image className='navLogo' src='/img/mg_logo_lg.png' width={50} height={50} alt='Mike Gary Brand Logo' />
                      </Box>
                   </Link>
                </Typography>
