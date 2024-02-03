@@ -33,8 +33,8 @@ import '../../globals.css'
 // }
 
 const drawerWidth = 240;
-const navItems = ['About', 'Aftercare', 'Blogs', 'Contact', 'Projects'];
-const drawerItems = ['Home', 'About', 'Aftercare', 'Blogs', 'Contact', 'Projects']
+const navItems = ['About', 'Aftercare', 'Contact'];
+const drawerItems = ['Home', 'About', 'Aftercare', 'Contact']
 
 export default function DrawerAppBar() {
    const [mobileOpen, setMobileOpen] = useState(false);
