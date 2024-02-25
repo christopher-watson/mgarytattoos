@@ -428,8 +428,8 @@ contact-form-error {
    justify-content: center;
    max-width: 1800px;
    margin-bottom: 60px;
-   background: rgb(2,0,36);
-   background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 20%, rgba(32,32,32,1) 100%); 
+   background: var(--bg-black);
+   background: linear-gradient(180deg, var(--bg-black) 0%, rgba(0,0,0,1) 20%, rgba(32,32,32,1) 100%); 
 }
 
 
