@@ -18,27 +18,27 @@ const landing = {
          title: 'Text Area 2 Heading',
          type: 'string'
       },
-      {
-         name: 'contactHeading',
-         title: 'Contact Heading',
-         type: 'string'
-      },
+      // {
+      //    name: 'contactHeading',
+      //    title: 'Contact Heading',
+      //    type: 'string'
+      // },
       // {
       //    name: 'contact',
       //    title: 'Contact Area',
       //    type: 'array',
       //    of: [{ type: "block" }]
       // },
-      {
-         name: 'contactPlaceholder',
-         title: 'Tattoo Idea Text',
-         type: 'string'
-      },
-      {
-         name: 'contactPlaceholder2',
-         title: 'Tattoo Location Text',
-         type: 'string'
-      }
+      // {
+      //    name: 'contactPlaceholder',
+      //    title: 'Tattoo Idea Text',
+      //    type: 'string'
+      // },
+      // {
+      //    name: 'contactPlaceholder2',
+      //    title: 'Tattoo Location Text',
+      //    type: 'string'
+      // }
    ]
 }
 
