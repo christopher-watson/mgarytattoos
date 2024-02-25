@@ -5,13 +5,9 @@ export type Landing = {
    _createdAt: Date;
    title: string;
    text1Heading: string;
-   text1: PortableTextBlock[];
-   img1: string;
-   img1alt: string;
    text2Heading: string;
-   text2: PortableTextBlock[];
    contactHeading: string;
    contactPlaceholder: string;
    contactPlaceholder2: string;
-   contact: PortableTextBlock[];
+   // contact: PortableTextBlock[];
 };

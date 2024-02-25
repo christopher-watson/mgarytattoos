@@ -1,5 +1,5 @@
 import { Project } from "@/types/Project";
-import { Blog } from "@/types/Blog";
+// import { Blog } from "@/types/Blog";
 import { Landing } from "@/types/Landing";
 import { About } from "@/types/About";
 import { Aftercare } from "@/types/Aftercare";
@@ -20,15 +20,10 @@ export async function getLandingPage(): Promise<Landing> {
          _createdAt,
          title,
          text1Heading,
-         text1,
-         "img1": img1.asset->url,
-         "img1alt": img1.alt,
          text2Heading,
-         text2,
          contactHeading,
          contactPlaceholder,
          contactPlaceholder2,
-         contact
       }`
    )
 };
@@ -105,33 +100,33 @@ export async function getProject(slug: string): Promise<Project> {
    );
 };
 
-export async function getBlogs(): Promise<Blog[]> {
-   return createClient(clientConfig).fetch(
-      groq`*[_type=="blog"] | order(publishedAt asc){
-         _id,
-         _createdAt,
-         title,
-         "slug": slug.current,
-         "image": image.asset->url,
-         "imageAlt": image.alt,
-         "excerpt": array::join(string::split((pt::text(content)), "")[0..120], "") + "...",
-         content
-      }`
-   )
-};
+// export async function getBlogs(): Promise<Blog[]> {
+//    return createClient(clientConfig).fetch(
+//       groq`*[_type=="blog"] | order(publishedAt asc){
+//          _id,
+//          _createdAt,
+//          title,
+//          "slug": slug.current,
+//          "image": image.asset->url,
+//          "imageAlt": image.alt,
+//          "excerpt": array::join(string::split((pt::text(content)), "")[0..120], "") + "...",
+//          content
+//       }`
+//    )
+// };
 
-export async function getBlog(slug: string): Promise<Blog> {
-   return createClient(clientConfig).fetch(
-      groq`*[_type=="blog" && slug.current == $slug][0]{
-         _id,
-         _createdAt,
-         title,
-         "slug": slug.current,
-         "image": image.asset->url,
-         "imageAlt": image.alt,
-         content,
-         publishedAt
-      }`,
-      { slug }
-   )
-};
+// export async function getBlog(slug: string): Promise<Blog> {
+//    return createClient(clientConfig).fetch(
+//       groq`*[_type=="blog" && slug.current == $slug][0]{
+//          _id,
+//          _createdAt,
+//          title,
+//          "slug": slug.current,
+//          "image": image.asset->url,
+//          "imageAlt": image.alt,
+//          content,
+//          publishedAt
+//       }`,
+//       { slug }
+//    )
+// };

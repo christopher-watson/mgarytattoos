@@ -1,3 +1,3 @@
 ## Michael Gary Tattoos
 
-[Website Link](https://mikegarytattoos.vercel.app/)
+[Website Link](https://www.michaelgarytattoos.com/)

@@ -38,6 +38,13 @@ main {
    color: var(--brand-white);
 }
 
+.brand-logo-div {
+   margin: 24px 0;
+   padding: 40px 0;
+   display: flex;
+   justify-content: center;
+}
+
 .brand-logo {
    margin: 24px 0;
 }
@@ -59,12 +66,9 @@ main {
    color: var(--text-black);
    grid-template-rows: repeat(5, max-content);
    grid-template-areas:
-      "hero"
-      "section1"
-      "wide-image"
+      "gallery"
       "section2"
       "contact";
-   margin-top: -96px;
 }
 
 .home-hero {
@@ -79,29 +83,42 @@ main {
    color: var(--brand-white);
 }
 
-.image1-section {
-   min-height: 750px;
-}
-
-.image1-section img {
-   object-fit: cover;
-}
-
 .text1-section {
-   display: grid;
-   grid-auto-flow: column;
-   grid-template-columns: .75fr 1fr;
+   margin: 24px 0;
+}
+
+.text2-section {
+   padding: 40px 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
    align-items: center;
 }
 
-.contact-section {
+.image1-gallery {
+   padding: 20px;
+}
+
+.text2-section button {
+   width: 300px;
+   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+   background-color: var(--brand-red);
+}
+
+.text2-section button:hover {
+   background-color: var(--brand-red-90);
+}
+
+
+/* .contact-section {
    color: var(--brand-white);
 }
 
 .contact-blur {
    padding: 20px;
    text-align: center;
-}
+} */
+
 
 @media (max-width: 600px) {
    #home-container {
@@ -112,10 +129,6 @@ main {
       grid-auto-flow: row;
       grid-template-rows: min-content 1fr;
       grid-template-columns: none;
-   }
-
-   .image1-section {
-      min-height: 400px;
    }
 }
 
@@ -151,17 +164,8 @@ contact-form-error {
    margin-top: 8px;
 }
 
-.landing-page-contact-form button,
 .contact-page-contact-form button {
    margin: 2rem 0;
-}
-
-.landing-page-contact-form button {
-   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.landing-page-contact-form button:hover {
-   background-color: var(--text-black);
 }
 
 .contact-page-contact-form button {
@@ -205,6 +209,10 @@ contact-form-error {
    color: var(--brand-white);
 }
 
+.contact-page-content-div a {
+   width: max-content
+}
+
 .contact-page-form-div {
    grid-area: contact-form;
    align-items: center;
@@ -235,6 +243,7 @@ contact-form-error {
    .contact-page-form-div {
       grid-area: contact-form;
       align-items: center;
+      justify-content: center;
    }
 
    .contact-page-content-div {
@@ -340,7 +349,7 @@ contact-form-error {
 }
 
 /* ------------------------------------------ blogs */
-.blogs-container {
+/* .blogs-container {
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -362,10 +371,10 @@ contact-form-error {
 
 .blog-card a img {
    height: 200px;
-}
+} */
 
 /* ------------------------------------------ [blog] */
-.blog-container {
+/* .blog-container {
    display: flex;
    padding: 24px;
    flex-direction: column;
@@ -406,7 +415,7 @@ contact-form-error {
       flex-direction: column;
       gap: 8px;
    }
-}
+} */
 
 /* ------------------------------------------ Masonry Grid */
 #masonry-map-container {
@@ -419,6 +428,8 @@ contact-form-error {
    justify-content: center;
    max-width: 1800px;
    margin-bottom: 60px;
+   background: var(--bg-black);
+   background: linear-gradient(180deg, var(--bg-black) 0%, rgba(0,0,0,1) 20%, rgba(32,32,32,1) 100%); 
 }
 
 
@@ -452,6 +463,7 @@ contact-form-error {
 #project-container .brand-logo {
    display: flex;
    justify-content: center;
+   padding: 40px 0;
 }
 
 .project-image {

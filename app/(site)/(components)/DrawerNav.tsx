@@ -33,8 +33,8 @@ import '../../globals.css'
 // }
 
 const drawerWidth = 240;
-const navItems = ['About', 'Aftercare', 'Blogs', 'Contact', 'Projects'];
-const drawerItems = ['Home', 'About', 'Aftercare', 'Blogs', 'Contact', 'Projects']
+const navItems = ['Home', 'About', 'Aftercare', 'Contact'];
+const drawerItems = ['Home', 'About', 'Aftercare', 'Contact']
 
 export default function DrawerAppBar() {
    const [mobileOpen, setMobileOpen] = useState(false);
@@ -104,13 +104,13 @@ export default function DrawerAppBar() {
                         columnGap: '10px', width: 'max-content',
                         color: '#fff',
                      }}>
-                        <Image className='navLogo' src='/img/mg_logo_lg.png' width={50} height={50} alt='Mike Gary Brand Logo' />
+                        <Image className='navLogo' src='/img/mg_logo_lg.png' width={50} height={50} alt='Michael Gary Brand Logo' />
                      </Box>
                   </Link>
                </Typography>
                <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                   {navItems.map((item) => (
-                     <Link href={`/${item.toLowerCase()}`} key={item} className='mg-nav-item'>
+                     <Link href={`/${item == 'Home' ? '/' : item.toLowerCase()}`} key={item} className='mg-nav-item'>
                         <Button sx={{ fontWeight: 'bold' }}>
                            {item}
                         </Button>
@@ -119,7 +119,7 @@ export default function DrawerAppBar() {
                </Box>
                <Link href={'/'}>
                   <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-                     <Image className='navLogo' src='/img/mg_logo_lg.png' width={50} height={50} alt='Mike Gary Brand Logo' />
+                     <Image className='navLogo' src='/img/mg_logo_lg.png' width={50} height={50} alt='Michael Gary Brand Logo' />
                   </Box>
                </Link>
             </Toolbar>
